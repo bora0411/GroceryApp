@@ -1,0 +1,17 @@
+<h1>Shopping List</h1>
+<div class="addItem" ng-controller="AddCtrl">
+  <br>{{$storage.list}}
+  <form>
+    <input type="text" placeholder="Add Item" ng-model="itemToAdd"><button type="submit" ng-click="addItem()">Add</button>
+  </form>
+  <ul ng-repeat="item in $storage.list">
+     <li><h4 ng-class="{strike: item.check}"><input type="checkbox" ng-model="item.check">{{item.toDo}}</input></h4></li>
+
+  </ul>
+
+   <button type="button" ng-click="deleteItem()">Delete Completed</button>
+
+
+<!-- <button ng-click="$storage.x = $storage.x + 1">{{$storage.toDo}}</button> + <button ng-click="$storage.y = $storage.y + 1">{{$storage.y}}</button> = {{$storage.x + $storage.y}} -->
+  
+</div>
