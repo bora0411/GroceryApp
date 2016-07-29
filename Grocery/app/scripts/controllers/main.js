@@ -17,19 +17,20 @@ app.controller('MainCtrl', function () {
 	});
 
 app.controller('AddCtrl', ['$scope', '$localStorage', function ($scope, $localStorage){
-	$scope.list = [];
 		 $scope.$storage = $localStorage;
+		 $scope.list = [];
 		 
 		 // Add an item to localStorage
 		$scope.addItem = function(){
 			if ($scope.itemToAdd =='' || $scope.itemToAdd == null) {
 					return;
 				} else {
-					$localStorage.list.push({
+					$scope.list.push({
 					toDo: $scope.itemToAdd,
 					check: false
 					});
 					$scope.itemToAdd = "";
+					$localStorage.list = $scope.list;
 				} 
 		};
 
@@ -37,7 +38,8 @@ app.controller('AddCtrl', ['$scope', '$localStorage', function ($scope, $localSt
 		$scope.deleteItem = function() {
 			var listcopy = angular.copy($localStorage.list);
 			for (var i = 0; i < listcopy.length; i++) {
-				if (listcopy[i].check == true) {
+				if (listcopy[i].check == false) {
+					//$scope.list[i] = listcopy[i];
 					$localStorage.list.splice(i, 1);
 				}
 			};

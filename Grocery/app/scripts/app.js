@@ -12,7 +12,6 @@ angular
   .module('groceryApp', [
     'ngResource',
     'ngRoute',
-    'ngStorage',
     'groceryController'
   ])
   .config(function ($routeProvider) {
