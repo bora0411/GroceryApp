@@ -18,39 +18,47 @@ app.controller('MainCtrl', function () {
 
 app.controller('AddCtrl', ['$scope', '$localStorage', function ($scope, $localStorage){
 		 $scope.$storage = $localStorage;
-		 $scope.list = [];
-		 
+
 		 // Add an item to localStorage
 		$scope.addItem = function(){
 			if ($scope.itemToAdd =='' || $scope.itemToAdd == null) {
 					return;
-				} else {
-					$scope.list.push({
+				} else if ($scope.$storage.list == null || $scope.$storage.list == 'undefined') {
+					//define a local storage list 
+					$localStorage.list = [];
+
+					$localStorage.list.push({
 					toDo: $scope.itemToAdd,
 					check: false
 					});
+
+				} else {
+					var storageSize = $localStorage.list.length;
+					$localStorage.list.splice(storageSize, 0, {
+					toDo: $scope.itemToAdd,
+					check: false
+					});
+				}
 					$scope.itemToAdd = "";
-					$localStorage.list = $scope.list;
-				} 
 		};
 
 		// Remove a completed item from localStorage
 		$scope.deleteItem = function() {
+			var completedItems = [];
+			var incompletedItems = [];
 			var listcopy = angular.copy($localStorage.list);
-			for (var i = 0; i < listcopy.length; i++) {
-				if (listcopy[i].check == false) {
-					//$scope.list[i] = listcopy[i];
+			angular.forEach(listcopy, function(i) {
+				if (i == null){
 					$localStorage.list.splice(i, 1);
+				} else if (i.check == true) {
+					completedItems.push(i);
+				} else if (i.check == false) {
+					incompletedItems.push(i);
 				}
-			};
+			});
+			$localStorage.list = incompletedItems;
+			
 		};
-		// 	// angular.forEach($localStorage.list, function(i) {
-		// 	// 	if (i.check == true) {
-		// 	// 		$localStorage.list.push(i);
-					
-		// 	// 	}
-		// 	// });
-		// };
 
 
 	}]);

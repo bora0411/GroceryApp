@@ -1,6 +1,7 @@
 <h1>Shopping List</h1>
 <div class="addItem" ng-controller="AddCtrl">
   <br>{{$storage.list}}
+  <br>{{lgth}}
   <form>
     <input type="text" placeholder="Add Item" ng-model="itemToAdd"><button type="submit" ng-click="addItem()">Add</button>
   </form>

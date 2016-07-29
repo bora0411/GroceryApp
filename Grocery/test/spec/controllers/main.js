@@ -41,19 +41,28 @@ describe('Controller: AddCtrl', function() {
       var controller = $controller('AddCtrl', { $scope: $scope, $localStorage: $localStorage });
       $scope.itemToAdd = 'food';
       $scope.$storage = $localStorage;
+      $scope.$storage.list = [];
       $scope.addItem();
       expect($scope.$storage.list).toContain({toDo: 'food', check: false});
     });
   });
 
     describe('$scope.deleteItem', function() {
-    it('deletes checked item(s) from the list', function() {
+    it('deletes checked item(s) from localStorage', function() {
       var $scope = {};
       var controller = $controller('AddCtrl', { $scope: $scope, $localStorage: $localStorage });
       $scope.$storage = $localStorage;
-      $scope.list = [{toDo: 'food', check: false}, {toDo: 'drink', check: true}]
+      $scope.$storage.list = [{toDo: 'food', check: false}, {toDo: 'drink', check: true}]
       $scope.deleteItem();
-      expect($scope.list).not.toContain({toDo: 'drink', check: true});
+      expect($scope.$storage.list).not.toContain({toDo: 'drink', check: true});
+    });
+    it('deletes null items from localStorage', function() {
+      var $scope = {};
+      var controller = $controller('AddCtrl', { $scope: $scope, $localStorage: $localStorage });
+      $scope.$storage = $localStorage;
+      $scope.$storage.list = [null, {toDo: 'food', check: false}, null, {toDo: 'drink', check: false}, null]
+      $scope.deleteItem();
+      expect($scope.$storage.list).not.toContain(null);
     });
   });
 });
