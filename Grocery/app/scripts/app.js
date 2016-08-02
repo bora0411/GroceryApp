@@ -12,7 +12,9 @@ angular
   .module('groceryApp', [
     'ngResource',
     'ngRoute',
-    'groceryController'
+    'groceryController',
+    'groceryService',
+    'browseController'
   ])
   .config(function ($routeProvider) {
     $routeProvider

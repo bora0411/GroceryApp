@@ -16,31 +16,43 @@ app.controller('MainCtrl', function () {
 	    ];
 	});
 
+
 app.controller('AddCtrl', ['$scope', '$localStorage', function ($scope, $localStorage){
 		 $scope.$storage = $localStorage;
-
+		 $scope.quantity = 1;
+		 
 		 // Add an item to localStorage
-		$scope.addItem = function(){
-			if ($scope.itemToAdd =='' || $scope.itemToAdd == null) {
+		$scope.addItem = function(itemName){
+			if (itemName =='' || itemName == null) {
 					return;
 				} else if ($scope.$storage.list == null || $scope.$storage.list == 'undefined') {
 					//define a local storage list 
 					$localStorage.list = [];
-
-					$localStorage.list.push({
-					toDo: $scope.itemToAdd,
-					check: false
-					});
-
-				} else {
-					var storageSize = $localStorage.list.length;
-					$localStorage.list.splice(storageSize, 0, {
-					toDo: $scope.itemToAdd,
-					check: false
-					});
 				}
+					$localStorage.list.push({
+					toDo: itemName,
+					check: false,
+					number: $scope.quantity
+					});
+
 					$scope.itemToAdd = "";
 		};
+
+		// $scope.addItem = function(itemName) {
+		// 	if ($scope.$storage.list == null || $scope.$storage.list == 'undefined') {
+		// 			//define a local storage list 
+		// 			$localStorage.list = [];
+
+		// 		} 
+		// 			var storageSize = $localStorage.list.length;
+		// 			$localStorage.list.splice(storageSize, 0, {
+		// 			toDo: $scope.itemToAdd,
+		// 			check: false,
+		// 			number: $scope.quantity
+		// 			});
+		// 			$scope.itemToAdd = "";
+
+		// };
 
 		// Remove a completed item from localStorage
 		$scope.deleteItem = function() {
@@ -60,5 +72,8 @@ app.controller('AddCtrl', ['$scope', '$localStorage', function ($scope, $localSt
 			
 		};
 
+		$scope.addQuantity = function(){
+
+	}
 
 	}]);

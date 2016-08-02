@@ -1,1 +1,12 @@
-<p>This is the about view.</p>
+<div ng-controller='ProductsCtrl'>
+      <ul ng-controller='AddCtrl' class="products">
+        <li ng-repeat="product in products | orderBy:order"
+            class="thumbnail products">
+
+
+          <button ng-click="addItem(product.name)">{{product.name}}</button>
+          <img src="{{product.img}}">
+
+        </li>
+      </ul>
+</div>

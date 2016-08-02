@@ -21,3 +21,10 @@ describe('Controller: BrowseCtrl', function () {
     expect(BrowseCtrl.awesomeThings.length).toBe(3);
   });
 });
+
+// describe('Controller: ProductsCtrl', function() {
+//   beforeEach(function() {
+    
+//   });
+
+// })

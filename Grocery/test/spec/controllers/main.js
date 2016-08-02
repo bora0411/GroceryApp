@@ -39,11 +39,11 @@ describe('Controller: AddCtrl', function() {
     it('adds an item to the local storage', function() {
       var $scope = {};
       var controller = $controller('AddCtrl', { $scope: $scope, $localStorage: $localStorage });
-      $scope.itemToAdd = 'food';
+      var itemToAdd = 'food';
       $scope.$storage = $localStorage;
       $scope.$storage.list = [];
-      $scope.addItem();
-      expect($scope.$storage.list).toContain({toDo: 'food', check: false});
+      $scope.addItem(itemToAdd);
+      expect($scope.$storage.list).toContain({toDo: 'food', check: false, number: 1});
     });
   });
 
@@ -52,15 +52,15 @@ describe('Controller: AddCtrl', function() {
       var $scope = {};
       var controller = $controller('AddCtrl', { $scope: $scope, $localStorage: $localStorage });
       $scope.$storage = $localStorage;
-      $scope.$storage.list = [{toDo: 'food', check: false}, {toDo: 'drink', check: true}]
+      $scope.$storage.list = [{toDo: 'food', check: false, number:1}, {toDo: 'drink', check: true, number: 2}]
       $scope.deleteItem();
-      expect($scope.$storage.list).not.toContain({toDo: 'drink', check: true});
+      expect($scope.$storage.list).not.toContain({toDo: 'drink', check: true, number: 2});
     });
     it('deletes null items from localStorage', function() {
       var $scope = {};
       var controller = $controller('AddCtrl', { $scope: $scope, $localStorage: $localStorage });
       $scope.$storage = $localStorage;
-      $scope.$storage.list = [null, {toDo: 'food', check: false}, null, {toDo: 'drink', check: false}, null]
+      $scope.$storage.list = [null, {toDo: 'food', check: false, number: 1}, null, {toDo: 'drink', check: false, number: 2}, null]
       $scope.deleteItem();
       expect($scope.$storage.list).not.toContain(null);
     });

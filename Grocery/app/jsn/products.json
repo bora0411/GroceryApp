@@ -1,0 +1,136 @@
+[   {
+        "name": "Asparagus",
+        "img": "img/asparagus.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Broccoli",
+        "img": "img/broccoli.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Carrots",
+        "img": "img/carrots.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Corn",
+        "img": "img/corn.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Mushrooms",
+        "img": "img/mushrooms.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Apples",
+        "img": "img/apple.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Avocados",
+        "img": "img/avocado.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Bananas",
+        "img": "img/bananas.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Cherries",
+        "img": "img/cherries.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Grapes",
+        "img": "img/grapes.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Lemons",
+        "img": "img/lemons.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Oranges",
+        "img": "img/oranges.jpg",
+        "group": "produce"
+    },
+    {
+        "name": "Butter",
+        "img": "img/butter.jpg",
+        "group": "Diary"
+    },
+            {
+        "name": "Cheese",
+        "img": "img/cheese.jpg",
+        "group": "Diary"
+    },
+        {
+        "name": "Milk",
+        "img": "img/milk.jpeg",
+        "group": "Diary"
+    },
+        {
+        "name": "Yogurt",
+        "img": "img/yogurt.jpg",
+        "group": "Diary"
+    },
+        {
+        "name": "Pork",
+        "img": "img/pork.jpg",
+        "group": "Meat"
+    },
+        {
+        "name": "Beef",
+        "img": "img/beef.jpg",
+        "group": "Meat"
+    },
+        {
+        "name": "Chicken",
+        "img": "img/chicken.jpg",
+        "group": "Meat"
+    },
+        {
+        "name": "Juice",
+        "img": "img/juice.jpg",
+        "group": "Beverages"
+    },
+    {
+        "name": "Soda Pop",
+        "img": "img/sodapop.jpg",
+        "group": "Beverages"
+    },
+    {
+        "name": "Sports Drink",
+        "img": "img/sportsdrink.jpg",
+        "group": "Beverages"
+    },
+    {
+        "name": "Coffee",
+        "img": "img/coffee.jpg",
+        "group": "Beverages"
+    },
+    {
+        "name": "Bagels",
+        "img": "img/bagels.jpg",
+        "group": "Baked Goods"
+    },
+    {
+        "name": "Cake",
+        "img": "img/cake.jpg",
+        "group": "Baked Goods"
+    },
+    {
+        "name": "Donuts",
+        "img": "img/donuts.jpg",
+        "group": "Baked Goods"
+    },
+    {
+        "name": "Sliced Bread",
+        "img": "img/slicedbread.jpg",
+        "group": "Baked Goods"
+    }
+]
