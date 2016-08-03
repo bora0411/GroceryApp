@@ -72,8 +72,8 @@ app.controller('AddCtrl', ['$scope', '$localStorage', function ($scope, $localSt
 			
 		};
 
-		$scope.addQuantity = function(){
-
-	}
+		$scope.deleteAll = function() {
+			$localStorage.$reset();
+		}
 
 	}]);

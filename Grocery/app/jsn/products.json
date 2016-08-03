@@ -1,134 +1,161 @@
-[   {
+[   {   
+        "id": "0",
         "name": "Asparagus",
         "img": "img/asparagus.jpg",
         "group": "produce"
     },
     {
+        "id": "1",
         "name": "Broccoli",
         "img": "img/broccoli.jpg",
         "group": "produce"
     },
     {
+        "id": "2",
         "name": "Carrots",
         "img": "img/carrots.jpg",
         "group": "produce"
     },
     {
+        "id": "3",
         "name": "Corn",
         "img": "img/corn.jpg",
         "group": "produce"
     },
     {
+        "id": "4",
         "name": "Mushrooms",
         "img": "img/mushrooms.jpg",
         "group": "produce"
     },
     {
+        "id": "5",
         "name": "Apples",
         "img": "img/apple.jpg",
         "group": "produce"
     },
     {
+        "id": "6",
         "name": "Avocados",
         "img": "img/avocado.jpg",
         "group": "produce"
     },
     {
+        "id": "7",
         "name": "Bananas",
         "img": "img/bananas.jpg",
         "group": "produce"
     },
     {
+        "id": "8",
         "name": "Cherries",
         "img": "img/cherries.jpg",
         "group": "produce"
     },
     {
+        "id": "9",
         "name": "Grapes",
         "img": "img/grapes.jpg",
         "group": "produce"
     },
     {
+        "id": "10",
         "name": "Lemons",
         "img": "img/lemons.jpg",
         "group": "produce"
     },
     {
+        "id": "11",
         "name": "Oranges",
         "img": "img/oranges.jpg",
         "group": "produce"
     },
     {
+        "id": "12",
         "name": "Butter",
         "img": "img/butter.jpg",
         "group": "Diary"
     },
-            {
+    {  
+        "id": "13",
         "name": "Cheese",
         "img": "img/cheese.jpg",
         "group": "Diary"
     },
-        {
+    {
+        "id": "14",
         "name": "Milk",
         "img": "img/milk.jpeg",
         "group": "Diary"
     },
-        {
+    {
+        "id": "15",
         "name": "Yogurt",
         "img": "img/yogurt.jpg",
         "group": "Diary"
     },
-        {
+    {
+        "id": "16",
         "name": "Pork",
         "img": "img/pork.jpg",
         "group": "Meat"
     },
-        {
+    {
+        "id": "17",
         "name": "Beef",
         "img": "img/beef.jpg",
         "group": "Meat"
     },
-        {
+    {
+        "id": "18",
         "name": "Chicken",
         "img": "img/chicken.jpg",
         "group": "Meat"
     },
-        {
+    {
+        "id": "19",
         "name": "Juice",
         "img": "img/juice.jpg",
         "group": "Beverages"
     },
     {
+        "id": "20",
         "name": "Soda Pop",
         "img": "img/sodapop.jpg",
         "group": "Beverages"
     },
     {
+        "id": "21",
         "name": "Sports Drink",
         "img": "img/sportsdrink.jpg",
         "group": "Beverages"
     },
     {
+        "id": "22",
         "name": "Coffee",
         "img": "img/coffee.jpg",
         "group": "Beverages"
     },
     {
+        "id": "23",
         "name": "Bagels",
         "img": "img/bagels.jpg",
         "group": "Baked Goods"
     },
     {
+        "id": "24",
         "name": "Cake",
         "img": "img/cake.jpg",
         "group": "Baked Goods"
     },
     {
+        "id": "25",
         "name": "Donuts",
         "img": "img/donuts.jpg",
         "group": "Baked Goods"
     },
     {
+        "id": "26",
         "name": "Sliced Bread",
         "img": "img/slicedbread.jpg",
         "group": "Baked Goods"

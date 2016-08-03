@@ -1,12 +1,32 @@
 <div ng-controller='ProductsCtrl'>
-      <ul ng-controller='AddCtrl' class="products">
-        <li ng-repeat="product in products | orderBy:order"
-            class="thumbnail products">
+	<div ng-controller='ModalCtrl'>
+		<div ng-controller='AddCtrl'>
+
+	      <ul class="products">
+	        <li ng-repeat="product in products | orderBy:order" class="thumbnail products">
+					<script type="text/ng-template" id="ModalContent.html">
+						<div ng-controller='ProductsCtrl'>
+						<div ng-controller='AddCtrl'>
+						    <div class="modal-header">
+						        <h3 class="modal-title">Select quantity for {{products[id].name}}</h3>
+						    </div>
+						    <div class="modal-body">
+						        <input type="number" ng-model="quantity" name="points" min="1" required>
+						    </div>
+						    <div class="modal-footer">
+						        <button class="btn btn-primary" type="button" ng-click="addItem(products[id].name); ok()">OK</button>
+						        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+						    </div>
+						</div>
+						</div>
+					</script>
 
 
-          <button ng-click="addItem(product.name)">{{product.name}}</button>
-          <img src="{{product.img}}">
+	          <button ng-click="open(product.id)">{{product.name}}</button>
+	          <img src="{{product.img}}">
 
-        </li>
-      </ul>
+	        </li>
+	      </ul>
+	  </div>
+      </div>
 </div>
